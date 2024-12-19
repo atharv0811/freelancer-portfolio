@@ -1,9 +1,10 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Image from "next/image";
-import { Oswald } from "next/font/google";
 import Link from "next/link";
+import { Oswald } from "next/font/google";
+import { motion } from "framer-motion";
+import { Button } from "./ui/button";
 
 const oswald = Oswald({ subsets: ["latin"] });
 
@@ -56,15 +57,15 @@ const Hero: React.FC = () => {
                         variants={buttonVariants}
                     >
                         <Link href="/about">
-                            <button className="w-[8rem] md:w-[10rem] h-[2.5rem] md:h-[3rem] font-bold bg-[#6930c3] hover:bg-transparent text-white hover:text-[#6930c3] border border-[#6930c3] text-sm md:text-lg rounded transition-colors duration-150">
+                            <Button className="w-[8rem] md:w-[10rem] h-[2.5rem] md:h-[3rem] font-bold bg-[#6930c3] hover:bg-transparent text-white hover:text-[#6930c3] border border-[#6930c3] text-sm md:text-lg rounded transition-colors duration-150">
                                 About Me
-                            </button>
+                            </Button>
                         </Link>
-                        <a href="#projects">
-                            <button className="w-[8rem] md:w-[10rem] h-[2.5rem] md:h-[3rem] font-bold bg-transparent text-[#6930c3] border border-[#6930c3] hover:bg-[#6930c3] hover:text-white text-sm md:text-lg rounded transition-colors duration-150">
+                        <Link href="#projects">
+                            <Button className="w-[8rem] md:w-[10rem] h-[2.5rem] md:h-[3rem] font-bold bg-transparent text-[#6930c3] border border-[#6930c3] hover:bg-[#6930c3] hover:text-white text-sm md:text-lg rounded transition-colors duration-150">
                                 Projects
-                            </button>
-                        </a>
+                            </Button>
+                        </Link>
                     </motion.div>
                 </motion.div>
 

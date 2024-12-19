@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useScrollPosition } from "../hooks/useScrollPosition";
 import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
+import { Button } from "./ui/button";
 
 const Navbar = () => {
     const { isScrolled, isVisible } = useScrollPosition();
@@ -64,11 +65,11 @@ const Navbar = () => {
                         <NavLink href="/blog" onClick={handleNavClick}>
                             Blog
                         </NavLink>
-                        <button className="relative px-4 py-2 border border-gray-500 rounded-3xl hover:bg-[#6930c3] hover:text-white transition-colors duration-500">
+                        <Button variant='outline' className="relative px-4 py-2 border border-gray-500 rounded-3xl hover:bg-[#6930c3] hover:text-white transition-colors duration-500">
                             <a href="https://wa.me/919370755714?text=Hello, How can I help you ?" target="_blank" className="font-medium">
                                 Connect On WhatsApp
                             </a>
-                        </button>
+                        </Button>
                     </div>
 
                     {/* Mobile menu button */}
@@ -129,11 +130,11 @@ const Navbar = () => {
                         >
                             Blog
                         </NavLink>
-                        <button className="relative px-4 py-2 border border-gray-500 rounded-3xl hover:bg-[#6930c3] hover:text-white transition-colors duration-500">
+                        <Button variant='outline' className="relative px-4 py-2 border border-gray-500 rounded-3xl hover:bg-[#6930c3] hover:text-white transition-colors duration-500">
                             <a href="https://wa.me/919370755714?text=Hello, How can I help you ?" target="_blank" className="font-medium">
                                 Connect On WhatsApp
                             </a>
-                        </button>
+                        </Button>
                     </div>
                 </div>
             </div>

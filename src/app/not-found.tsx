@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { HomeIcon } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 
 export default function Custom404() {
     return (
@@ -9,12 +10,12 @@ export default function Custom404() {
             <p className="text-gray-500 mb-8 text-center max-w-md">
                 Oops! The page you&apos;re looking for doesn&apos;t exist. It might have been moved or deleted.
             </p>
-            <button className='px-4 py-2 border rounded-lg hover:bg-[#6930c3] hover:text-white transition-colors duration-500'>
+            <Button variant='outline' className='border-[#9253f7] bg-transparent hover:bg-[#6930c3] hover:text-white transition-colors duration-500'>
                 <Link href="/" className='flex items-center gap-1'>
                     <HomeIcon className="mr-2 h-4 w-4" />
                     Back to Home
                 </Link>
-            </button>
+            </Button>
         </div>
     )
 }
