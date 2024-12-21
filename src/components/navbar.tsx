@@ -5,7 +5,6 @@ import { useState } from "react";
 import { useScrollPosition } from "../hooks/useScrollPosition";
 import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
-import { Button } from "./ui/button";
 
 const Navbar = () => {
     const { isScrolled, isVisible } = useScrollPosition();
@@ -50,7 +49,7 @@ const Navbar = () => {
                     </div>
 
                     <div className="hidden lg:flex items-center space-x-8">
-                        <NavLink href="#home" onClick={handleNavClick}>
+                        <NavLink href="/" onClick={handleNavClick}>
                             Home
                         </NavLink>
                         <NavLink href="/about" onClick={handleNavClick}>
@@ -65,11 +64,11 @@ const Navbar = () => {
                         <NavLink href="/blog" onClick={handleNavClick}>
                             Blog
                         </NavLink>
-                        <Button variant='outline' className="relative px-4 py-2 border border-gray-500 rounded-3xl hover:bg-[#6930c3] hover:text-white transition-colors duration-500">
+                        <button className="relative px-4 py-2 border border-gray-500 rounded-3xl hover:bg-[#6930c3] hover:text-white transition-colors duration-500">
                             <a href="https://wa.me/919370755714?text=Hello, How can I help you ?" target="_blank" className="font-medium">
                                 Connect On WhatsApp
                             </a>
-                        </Button>
+                        </button>
                     </div>
 
                     {/* Mobile menu button */}
@@ -103,7 +102,19 @@ const Navbar = () => {
                         }`}
                 >
                     <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                        {["Home", "Services", "Projects"].map((item, index) => (
+                        <NavLink
+                            href="/"
+                            onClick={handleNavClick}
+                            mobile
+                            className={`transform transition-all duration-300 delay-${3 * 100
+                                } ${isMobileMenuOpen
+                                    ? "translate-x-0 opacity-100"
+                                    : "-translate-x-4 opacity-0"
+                                }`}
+                        >
+                            Home
+                        </NavLink>
+                        {["Services", "Projects"].map((item, index) => (
                             <NavLink
                                 key={item}
                                 href={`#${item.toLowerCase()}`}
@@ -130,11 +141,11 @@ const Navbar = () => {
                         >
                             Blog
                         </NavLink>
-                        <Button variant='outline' className="relative px-4 py-2 border border-gray-500 rounded-3xl hover:bg-[#6930c3] hover:text-white transition-colors duration-500">
+                        <button className="relative px-4 py-2 border border-gray-500 rounded-3xl hover:bg-[#6930c3] hover:text-white transition-colors duration-500">
                             <a href="https://wa.me/919370755714?text=Hello, How can I help you ?" target="_blank" className="font-medium">
                                 Connect On WhatsApp
                             </a>
-                        </Button>
+                        </button>
                     </div>
                 </div>
             </div>

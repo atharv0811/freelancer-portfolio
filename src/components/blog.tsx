@@ -41,7 +41,7 @@ const Blog = () => {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-5">
                     {blogPosts.map((post) => (
                         <Link key={post.id} href={`/blog/${post.id}`} className="block h-[350px]">
                             <div className="h-full border rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
