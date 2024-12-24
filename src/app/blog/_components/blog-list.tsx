@@ -50,7 +50,7 @@ export default function BlogList({ searchQuery }: { searchQuery: string }) {
                 {searchQuery ? `Search Results for "${searchQuery}"` : 'Latest Posts'}
             </h2>
             {filteredPosts.length === 0 ? (
-                <p className="text-gray-600 dark:text-gray-300">No posts found matching your search criteria.</p>
+                <p className="text-gray-600">No posts found matching your search criteria.</p>
             ) : (
                 filteredPosts.map((post) => (
                     <BlogCard key={post.id} post={post} />

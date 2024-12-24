@@ -1,3 +1,5 @@
+'use client'
+
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Input } from '@/components/ui/input'
@@ -55,7 +57,7 @@ function FeaturedPosts() {
                 <ul className="space-y-2">
                     {featuredPosts.map((post) => (
                         <li key={post.id}>
-                            <Link href={`/blog/${post.id}`} className="text-blue-600 dark:text-blue-400 hover:underline">
+                            <Link href={`/blog/${post.id}`} className="text-[#6930c3] hover:underline">
                                 {post.title}
                             </Link>
                         </li>
@@ -75,10 +77,10 @@ function Categories() {
                 <CardTitle>Categories</CardTitle>
             </CardHeader>
             <CardContent>
-                <ul className="space-y-2">
+                <ul className="space-y-2 divide-y-2">
                     {categories.map((category) => (
-                        <li key={category}>
-                            <Link href={`/category/${category.toLowerCase()}`} className="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white">
+                        <li key={category} className='pt-3'>
+                            <Link href={`/category/${category.toLowerCase()}`} className="text-gray-600 hover:text-gray-800">
                                 {category}
                             </Link>
                         </li>
@@ -100,7 +102,7 @@ function Tags() {
             <CardContent>
                 <div className="flex flex-wrap gap-2">
                     {tags.map((tag) => (
-                        <Badge key={tag} variant="secondary" className="hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer">
+                        <Badge key={tag} variant="secondary" className="hover:bg-gray-200 cursor-pointer">
                             <Link href={`/tag/${tag.toLowerCase()}`} className="hover:underline">
                                 {tag}
                             </Link>

@@ -21,7 +21,7 @@ const BlogCard: FC<{ post: BlogPost }> = ({ post }) => {
                     <Badge variant="secondary" className="mb-2">
                         {post.category}
                     </Badge>
-                    <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">
+                    <div className="flex items-center text-sm text-gray-500">
                         <ClockIcon className="w-4 h-4 mr-1" />
                         {post.readTime}
                     </div>
@@ -33,8 +33,8 @@ const BlogCard: FC<{ post: BlogPost }> = ({ post }) => {
                 </CardTitle>
             </CardHeader>
             <CardContent>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">{post.excerpt}</p>
-                <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">
+                <p className="text-gray-600 mb-4">{post.excerpt}</p>
+                <div className="flex items-center text-sm text-gray-500">
                     <CalendarIcon className="w-4 h-4 mr-1" />
                     <time dateTime={post.date}>Published on {post.date}</time>
                 </div>
